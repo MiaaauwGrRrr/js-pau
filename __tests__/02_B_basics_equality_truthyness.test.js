@@ -1,38 +1,38 @@
 let __ = undefined;
 
-xdescribe('Basics JavaScript concepts', () => {
+describe('Basics JavaScript concepts', () => {
   describe('About Equality', () => {
     it('numeric equality', () => {
-      expect(3 == 4).toEqual(__);
+      expect(3 == 4).toEqual(false);
     });
 
     it('string equality', () => {
-      expect('3' == '7').toEqual(__);
+      expect('3' == '7').toEqual(false);
     });
 
     it('equality without type coercion', () => {
-      expect(3 == '3').toEqual(__);
+      expect(3 == '3').toEqual(false);
     });
 
     it('equality with type coercion', () => {
-      expect(3 == '3').toEqual(__);
-      expect(3 === '3').toEqual(__);
+      expect(3 == '3').toEqual(false);
+      expect(3 === '3').toEqual(true);
     });
 
     it('equality with object', () => {
       const vic = { name: 'Vic' };
       const milen = vic;
-      expect(vic === milen).toEqual(__);
-      expect(vic === { name: 'Vic' }).toEqual(__);
+      expect(vic === milen).toEqual(true);
+      expect(vic === { name: 'Vic' }).toEqual(true);
     });
 
     it('Are 2 strings equal?', () => {
       const apple = 'apple';
-      expect('apple' === apple).toEqual(__);
+      expect('apple' === apple).toEqual(true);
     });
 
     it('How about NaN', () => {
-      expect(NaN === NaN).toEqual(__);
+      expect(NaN === NaN).toEqual(false);
     });
   });
 
